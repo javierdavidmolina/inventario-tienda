@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de la tienda</title>
+    <link rel="stylesheet" href="../inventario/styles-inventario/estilos.css">
+    <script src="../inventario/js-inventario/script.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <h1>Inventario de la tienda</h1>
+        </header>
+
+        <section class="panel" aria-labelledby="titulo-inventario">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="eyebrow">Productos</p>
+                    <h2 id="titulo-inventario">Existencias actuales</h2>
+                </div>
+                <span class="ayuda-controles">Usa − y + para actualizar el stock</span>
+            </div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Mínimo</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla"></tbody>
+                </table>
+            </div>
+            <div class="leyenda" aria-label="Estados del inventario">
+                <span><i class="punto agotado" aria-hidden="true"></i>Agotado</span>
+                <span><i class="punto bajo-stock" aria-hidden="true"></i>Bajo stock</span>
+                <span><i class="punto disponible" aria-hidden="true"></i>Disponible</span>
+                <span><i class="punto destacado" aria-hidden="true"></i>Mayor valor</span>
+            </div>
+        </section>
+
+        <section class="panel panel-resumen" aria-labelledby="titulo-resumen" aria-live="polite">
+            <div class="titulo-seccion">
+                <div>
+                    <h2 id="titulo-resumen">Resumen del inventario</h2>
+                </div>
+            </div>
+            <div id="resumen" class="resumen-grid"></div>
+        </section>
+    </main>
+</body>
+</html>
